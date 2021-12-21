@@ -1,0 +1,49 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="presentationGauche">
+                <div class="miseEnPageGauche">
+                    <h3>Configurer votre montage</h3>
+
+                    <form>
+                        <div>
+                            <div class="budget">
+                                <span class="titre-budget"> Budget :</span>
+                                <div id="budget">
+                                    0 HT
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <button class="boutonConfig">Continuer →</button>
+                    <div>
+                        <span>besoin d'aide ?</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="presentationDroite">
+                <div class="miseEnPageDroite">
+                    <h3>Tariffer votre projet</h3>
+                    <input type="text" name="nomDuProjet" placeholder="Titre de votre projet">
+                </div>
+
+                <div class="duréeVideo">
+                    <h3>Durée de la vidéo</h3>
+                    <span>(plusieurs choix possibles)</span>
+
+                    <form>
+                        <div *ngFor="let checkbox of checkbox " class="row">
+                            <label class="checkbox">
+                                <h3>{{checkbox.name}}</h3>
+                                <p>{{checkbox.prix}}</p>
+                                <input type="checkbox" name="checkb format" (change)="onChange()" ng-checked="afficherPrix()" ng-click="">
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
