@@ -10,7 +10,7 @@
                             <div class="budget">
                                 <span class="titre-budget"> Budget :</span>
                                 <div id="budget">
-                                    0 HT
+                                    {{budget}}
                                 </div>
                             </div>
                         </div>
@@ -34,11 +34,11 @@
                     <span>(plusieurs choix possibles)</span>
 
                     <form>
-                        <div *ngFor="let checkbox of checkbox " class="row">
+                        <div *ngFor="let checkbox of checkboxes" class="row">
                             <label class="checkbox">
                                 <h3>{{checkbox.name}}</h3>
                                 <p>{{checkbox.prix}}</p>
-                                <input type="checkbox" name="checkb format" (change)="onChange()" ng-checked="afficherPrix()" ng-click="#">
+                                <input type="checkbox" name="checkb format" ngmodel="getCheckboxSelected">
                             </label>
                         </div>
                     </form>
