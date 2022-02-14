@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MotionComponent } from './pages/motion/motion.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     AccueilComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MotionComponent
   ],
   imports: [
     BrowserModule,

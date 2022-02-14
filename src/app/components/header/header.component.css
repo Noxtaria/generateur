@@ -1,0 +1,25 @@
+.contain {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    background-color: black;
+
+}
+
+.flex {
+
+    width: 500px;
+    margin-top: 2.5%;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
