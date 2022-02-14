@@ -37,13 +37,6 @@
     
 }
 
-.buttonPicture {
-
-    background-color: black;
-    color: grey;
-    
-}
-
 button {
 
     padding-top: 15%;
@@ -56,5 +49,11 @@ button {
 
     display: flex;
     justify-content: space-between;
+
+}
+
+.demarrer {
+width: 150px;
+
 
 }
