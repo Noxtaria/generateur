@@ -1,0 +1,60 @@
+.projets {
+
+    margin-left: 10%;
+
+}
+
+.picture{
+
+    width: 400px;
+    height: 266px;
+    overflow: hidden;
+
+}
+
+.projet{
+
+    width: 400px;
+    margin: 40px;
+    display: inline-block;
+    background-color: white;
+    border: 0px black solid;
+    overflow: hidden;
+
+}
+
+.projet img{
+
+    min-width: 400px;
+    height: 266px;
+
+}
+
+.spanLorem {
+
+    color: grey;
+    font-size: 14px;
+    
+}
+
+.buttonPicture {
+
+    background-color: black;
+    color: grey;
+    
+}
+
+button {
+
+    padding-top: 15%;
+    padding-bottom: 15%;
+    border-bottom-right-radius: 15px;
+    
+}
+
+.contain {
+
+    display: flex;
+    justify-content: space-between;
+
+}
