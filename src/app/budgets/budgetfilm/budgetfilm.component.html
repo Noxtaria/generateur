@@ -2,47 +2,49 @@
     <div class="container">
         <div class="row">
             <div class="presentationGauche">
-                <div class="miseEnPageGauche">
-                    <h3>Configurer votre montage</h3>
 
-                    <form>
+                <div class="miseEnPageGauche">
+
+                    <img class="siris" src="../../../assets/images/image_film_corporate_916x760.jpg" alt="IMAGE MOTION">
+
+                    <form class="formBudget">
                         <div>
                             <div class="budget">
-                                <span class="titre-budget"> Budget :</span>
+                                <p class="titre-budget">Estimation de votre projet</p>
                                 <div id="budget">
-                                    {{budget}} € HT
+                                    <span class="resultatBudget">{{budget}} € HT</span>         
                                 </div>
                             </div>
                         </div>
                     </form>
 
-                    <button class="boutonConfig">Continuer →</button>
-                    <div>
-                        <span>besoin d'aide ?</span>
-                    </div>
-
                 </div>
+
             </div>
+
             <div class="presentationDroite">
+
                 <div class="miseEnPageDroite">
-                    <h3>Tariffer votre projet</h3>
-                    <input type="text" name="nomDuProjet" placeholder="Titre de votre projet">
-                </div>
-
-                <div class="duréeVideo">
-                    <h3>Durée de la vidéo</h3>
-                    <span>(plusieurs choix possibles)</span>
-
-                    <form>
-                        <div *ngFor="let itemCheckbox of checkboxes" class="row">
-                            <label class="checkbox">
-                                <h3>{{itemCheckbox.name}}</h3>
-                                <p>{{itemCheckbox.prix}}</p> €
-                                <input type="checkbox" name="checkb format" (change)="updateBudget(itemCheckbox)" [(ngModel)]="itemCheckbox.selected">
-                            </label>
+                    <div class="positionAccordion">
+                        <div class="accordion">
+    
+                            <div class="duréeVideo">
+                                <h3>Durée de la vidéo</h3>
+                                <span>(plusieurs choix possibles)</span>
+            
+                                <form>
+                                    <div *ngFor="let itemCheckbox of checkboxes" class="row">
+                                        <label class="checkbox">
+                                            <h3>{{itemCheckbox.name}}</h3>
+                                            <p>{{itemCheckbox.prix}}</p> €
+                                            <input type="checkbox" name="checkb format" (change)="updateBudget(itemCheckbox)" [(ngModel)]="itemCheckbox.selected">
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>                    
+                </div>     
             </div>
         </div>
     </div>
