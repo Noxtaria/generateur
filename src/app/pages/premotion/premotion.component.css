@@ -1,3 +1,9 @@
+body {
+
+    font-family: 'Montserrat', arial;
+
+}
+
 .container .row {
 
     display: flex;
@@ -34,8 +40,9 @@
 button {
 
     font-size: 22px;
-    padding: 5%;
+    padding: 3%;
     cursor: pointer;
+    border:none;
 }
 
 .presentationDroite {
@@ -78,7 +85,7 @@ h1 {
 .buttonRealisations {
 
     background-color: black;
-    color: yellow;
+    color: #ffd200;
     font-weight: bolder;
     width: 100%;
 
@@ -86,7 +93,7 @@ h1 {
 
 .buttonBudget {
 
-    background-color: yellow;
+    background-color: #ffd200;
     color: black;
     font-weight: bolder;
     width: 100%;
@@ -95,6 +102,6 @@ h1 {
 
 .siris {
 
-    height: 842px;
+    height: 805px;
     width: 916px;
 }
