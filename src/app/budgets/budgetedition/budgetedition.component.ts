@@ -9,7 +9,7 @@ import { Checkbox } from 'src/app/models/Checkbox';
 export class BudgeteditionComponent implements OnInit {
 
   checkboxes: Checkbox[] = [];
-  budget: number = 0;
+  budget: number = 1500;
 
   constructor() { }
 
