@@ -43,7 +43,18 @@
 
     height: 842px;
     width: 916px;
+      
 }
+
+#triangle-left{
+    width  : 0;
+    height : 0;
+    border-top    : 35px solid transparent;
+    border-bottom : 35px solid transparent;
+    border-right  : 80px solid white;
+    position: absolute;
+    transform: translate(-220%, 440%);
+  }
 
 .titre-budget {
 
