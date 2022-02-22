@@ -37,6 +37,11 @@ body {
     height: 40px;
 }
 
+.square {
+
+    padding-right: 2%;
+} 
+
 button {
 
     font-size: 22px;
