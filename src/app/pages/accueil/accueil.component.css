@@ -28,16 +28,17 @@ body{
 
 }
 
-div .projet img {
+.projet img {
 
     cursor: pointer;
     background-image: url(../../../assets/images/bt_demarrer_roll.jpg);
 
 }
 
-div .projet img:hover{
+.projet img:hover{
 
-background-image: url(../../../assets/images/bt_demarrer_over.jpg);
+background: url(../../../assets/images/bt_demarrer_over.jpg);
+
 
 }
 
