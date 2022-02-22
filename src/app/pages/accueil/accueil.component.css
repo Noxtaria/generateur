@@ -28,10 +28,16 @@ body{
 
 }
 
-.projet img{
+div .projet img {
 
-    min-width: 400px;
-    height: 266px;
+    cursor: pointer;
+    background-image: url(../../../assets/images/bt_demarrer_roll.jpg);
+
+}
+
+div .projet img:hover{
+
+background-image: url(../../../assets/images/bt_demarrer_over.jpg);
 
 }
 
@@ -59,6 +65,9 @@ button {
 
 .demarrer {
 width: 150px;
+}
 
+.demarrer:hover {
 
+    background-image: url(../../../assets/images/bt_demarrer_over.jpg);
 }
