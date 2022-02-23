@@ -7,7 +7,7 @@ body {
 .container .row {
 
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
 }
 
 .presentationGauche {
@@ -18,7 +18,7 @@ body {
     width: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
-    
+
 }
 
 .miseEnPageGauche {
@@ -44,14 +44,14 @@ body {
 .square {
 
     padding-right: 2%;
-} 
+}
 
 button {
 
     font-size: 22px;
     padding: 3%;
     cursor: pointer;
-    border:none;
+    border: none;
 }
 
 .presentationDroite {

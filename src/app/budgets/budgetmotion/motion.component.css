@@ -43,22 +43,17 @@
     color: black;
 }
 
-.siris {
 
-    height: 842px;
-    width: 916px;
-      
-}
 
-#triangle-left{
-    width  : 0;
-    height : 0;
-    border-top    : 48px solid transparent;
-    border-bottom : 48px solid transparent;
-    border-right  : 77px solid white;
+#triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 48px solid transparent;
+    border-bottom: 48px solid transparent;
+    border-right: 77px solid white;
     position: absolute;
     transform: translate(-220%, 300%);
-  }
+}
 
 .titre-budget {
 

@@ -14,7 +14,10 @@ body {
 
     max-width: 100%;
     max-height: 100%;
-
+    background: url(../../../assets/images/image_fond_identite_visuelle_4500x3000.jpg);
+    width: 100%;
+    background-size: 150%;
+    background-repeat: no-repeat;
 }
 
 .miseEnPageGauche {
@@ -105,8 +108,8 @@ h1 {
 
 }
 
-.siris {
+.titre-identite {
 
-    height: 866px;
-    width: 916px;
+    position: absolute;
+    transform: translate(5%, 220%);
 }

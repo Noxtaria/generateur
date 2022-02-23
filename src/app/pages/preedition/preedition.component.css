@@ -7,13 +7,17 @@ body {
 .container .row {
 
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
 }
 
 .presentationGauche {
 
     max-width: 100%;
     max-height: 100%;
+    background: url(../../../assets/images/image_fond_edition_print_4500x3000.jpg);
+    width: 100%;
+    background-size: 150%;
+    background-repeat: no-repeat;
 
 }
 
@@ -40,14 +44,14 @@ body {
 .square {
 
     padding-right: 2%;
-} 
+}
 
 button {
 
     font-size: 22px;
     padding: 3%;
     cursor: pointer;
-    border:none;
+    border: none;
 }
 
 .presentationDroite {
@@ -105,8 +109,8 @@ h1 {
 
 }
 
-.siris {
+.titre-edition {
 
-    height: 866px;
-    width: 916px;
+    position: absolute;
+    transform: translate(5%, 220%);
 }

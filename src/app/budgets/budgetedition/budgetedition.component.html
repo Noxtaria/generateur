@@ -4,14 +4,15 @@
             <div class="presentationGauche">
 
                 <div class="miseEnPageGauche">
-                    <img class="titre-motion" src="../../../assets/images/titre_motion_design_745x345.png" alt="IMAGE MOTION">
+                    <img class="titre-edition" src="../../../assets/images/titre_edition_print_745x255.png"
+                        alt="TITRE EDITION">
 
                     <form class="formBudget">
                         <div>
                             <div class="budget">
                                 <p class="titre-budget">Estimation de votre projet</p>
                                 <div id="budget">
-                                    <span class="resultatBudget">{{budget}} € HT</span>         
+                                    <span class="resultatBudget">{{budget}} € HT</span>
                                 </div>
                             </div>
                         </div>
@@ -25,27 +26,29 @@
 
                 <div class="miseEnPageDroite">
                     <div class="positionAccordion">
-                        <div class="accordion">    
+                        <div class="accordion">
 
                             <div id="triangle-left"></div>
 
                             <div class="duréeVideo">
                                 <h3>Durée de la vidéo</h3>
                                 <span>(plusieurs choix possibles)</span>
-            
+
                                 <form>
                                     <div *ngFor="let itemCheckbox of checkboxes" class="row">
                                         <label class="checkbox">
                                             <h3>{{itemCheckbox.name}}</h3>
                                             <p>{{itemCheckbox.prix}}</p> €
-                                            <input type="checkbox" name="checkb format" (change)="updateBudget(itemCheckbox)" [(ngModel)]="itemCheckbox.selected">
+                                            <input type="checkbox" name="checkb format"
+                                                (change)="updateBudget(itemCheckbox)"
+                                                [(ngModel)]="itemCheckbox.selected">
                                         </label>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                    </div>                    
-                </div>     
+                    </div>
+                </div>
             </div>
         </div>
     </div>
