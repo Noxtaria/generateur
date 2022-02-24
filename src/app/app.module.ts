@@ -20,6 +20,9 @@ import { BudgetfilmComponent } from './budgets/budgetfilm/budgetfilm.component';
 import { BudgetcreationComponent } from './budgets/budgetcreation/budgetcreation.component';
 import { BudgetidentiteComponent } from './budgets/budgetidentite/budgetidentite.component';
 import { BudgetwebComponent } from './budgets/budgetweb/budgetweb.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { BudgetwebComponent } from './budgets/budgetweb/budgetweb.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
