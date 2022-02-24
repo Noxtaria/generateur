@@ -31,21 +31,22 @@
                             <div id="triangle-left"></div>
 
                             <div class="duréeVideo">
-                                <h3>Durée de la vidéo</h3>
-                                <span>(plusieurs choix possibles)</span>
 
-                                <form>
-                                    <div *ngFor="let itemCheckbox of checkboxes" class="row">
-                                        <label class="checkbox">
-                                            <h3>{{itemCheckbox.name}}</h3>
-                                            <p>{{itemCheckbox.prix}}</p> €
-                                            <input type="checkbox" name="checkb format"
-                                                (change)="updateBudget(itemCheckbox)"
-                                                [(ngModel)]="itemCheckbox.selected">
-                                        </label>
-                                    </div>
-                                </form>
+
+                                <label class="titre-label" id="example-radio-group-label">
+                                   <h1>1. Quelle durée souhaitez-vous ?</h1> 
+                                </label>
+                                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                                    <mat-radio-button class="example-radio-button" *ngFor="let duree of durees"
+                                        [value]="duree">
+                                        {{duree}}
+                                    </mat-radio-button>
+                                </mat-radio-group>
+                                
                             </div>
+                        </div>
+                        <div class="buttons">
+                            <button routerLink="../budgetmotion" class="buttonReset">Réinitialiser votre estimation</button>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ import { BudgetfilmComponent } from './budgets/budgetfilm/budgetfilm.component';
 import { BudgetcreationComponent } from './budgets/budgetcreation/budgetcreation.component';
 import { BudgetidentiteComponent } from './budgets/budgetidentite/budgetidentite.component';
 import { BudgetwebComponent } from './budgets/budgetweb/budgetweb.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
 
 
@@ -50,7 +50,8 @@ import { MatRadioModule } from '@angular/material/radio';
     ReactiveFormsModule,
     FormsModule,
     NoopAnimationsModule,
-    MatRadioModule
+    MatRadioModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

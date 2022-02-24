@@ -131,8 +131,8 @@ h1 {
 
 .duréeVideo {
 
-    padding-top: 40px;
-    padding-bottom: 150px;
+    padding-top: 25%;
+    padding-bottom: 36%;
     padding-left: 15px;
 }
 
@@ -152,4 +152,44 @@ h1 {
 
     position: absolute;
     transform: translate(5%, 220%);
+}
+
+.titre-label {
+
+    font-weight: bold;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+
+  .buttons {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.buttonReset {
+
+    background-color: black;
+    color: #ffd200;
+    font-weight: bolder;
+    width: 100%;
+
+}
+
+button {
+
+    font-size: 22px;
+    padding: 3%;
+    cursor: pointer;
+    border: none;
 }
