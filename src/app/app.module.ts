@@ -22,6 +22,7 @@ import { BudgetidentiteComponent } from './budgets/budgetidentite/budgetidentite
 import { BudgetwebComponent } from './budgets/budgetweb/budgetweb.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MatRadioModule } from '@angular/material/radio';
     FormsModule,
     NoopAnimationsModule,
     MatRadioModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,9 +21,9 @@ export class BudgetfilmComponent implements OnInit {
   private generateCheckboxFormat = () => {
     // Genere les valeurs des inputs checkbox
     this.checkboxes=[
-      {id:1, name:"Format Rapide", prix: 0, selected:false},
-      {id:2, name:"Format Standard", prix: 2000, selected:false},
-      {id:3, name:"Format Long", prix: 5000 , selected:false}
+      {id:1, name:"1 min", prix: 0, selected:false},
+      {id:2, name:"2 min", prix: 2000, selected:false},
+      {id:3, name:"3 min", prix: 5000 , selected:false}
     ]
   }
 
