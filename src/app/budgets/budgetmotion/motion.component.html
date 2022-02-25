@@ -32,46 +32,25 @@
 
                             <div class="duréeVideo">
 
-                                
+
                                 <mat-horizontal-stepper>
 
-                                    <!-- Step 1  -->
-                                    <mat-step>
-
-                                            <label class="titre-label" id="example-radio-group-label">
-                                                <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                                             </label>
-                                            <div *ngFor="let itemDuree of newDurees">
-                                                <div>
-                                                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                                        <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                                          {{itemDuree.name}}
-                                                        </mat-radio-button>
-                                                    </mat-radio-group>
-                                                </div>  
-                                            </div>
-
-                                            <div class="button-stepper">
-                                                <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                                                <button mat-button matStepperNext>Suivant</button>
-                                            </div>
-
-                                    </mat-step>
-
-                                    <!-- Step 2 -->
+                                    <!-- Step 1 Durée -->
                                     <mat-step>
 
                                         <label class="titre-label" id="example-radio-group-label">
-                                            <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                                         </label>
-                                        <div *ngFor="let itemDuree of newDurees">
+                                            <h1>1. Quelle durée souhaitez-vous ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemDuree of prixDurees">
                                             <div>
-                                                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                                    <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                                      {{itemDuree.name}}
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
+                                                        {{itemDuree.name}}
                                                     </mat-radio-button>
                                                 </mat-radio-group>
-                                            </div>  
+                                            </div>
                                         </div>
 
                                         <div class="button-stepper">
@@ -79,225 +58,270 @@
                                             <button mat-button matStepperNext>Suivant</button>
                                         </div>
 
-                                </mat-step>
-                                
-                                <!-- Step 3  -->
-                                <mat-step>
+                                    </mat-step>
 
-                                    <label class="titre-label" id="example-radio-group-label">
-                                        <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                                     </label>
-                                    <div *ngFor="let itemDuree of newDurees">
-                                        <div>
-                                            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                                <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                                  {{itemDuree.name}}
-                                                </mat-radio-button>
-                                            </mat-radio-group>
-                                        </div>  
-                                    </div>
+                                    <!-- Step 2 BT Graphique -->
+                                    <mat-step>
 
-                                    <div class="button-stepper">
-                                        <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                                        <button mat-button matStepperNext>Suivant</button>
-                                    </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>2. Reprise d'un branding / territoire graphique existant ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemBTGraphique of prixBTGraphiques">
+                                            <div class="button-radio-2">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemBTGraphique.name"
+                                                        (change)="updateBudget(itemBTGraphique)">
+                                                        {{itemBTGraphique.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-                            </mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-                            <!-- Step 4 -->
-                            <mat-step>
+                                    </mat-step>
 
-                                <label class="titre-label" id="example-radio-group-label">
-                                    <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                                 </label>
-                                <div *ngFor="let itemDuree of newDurees">
-                                    <div>
-                                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                            <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                              {{itemDuree.name}}
-                                            </mat-radio-button>
-                                        </mat-radio-group>
-                                    </div>  
-                                </div>
+                                    <!-- Step 3 Script -->
+                                    <mat-step>
 
-                                <div class="button-stepper">
-                                    <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                                    <button mat-button matStepperNext>Suivant</button>
-                                </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>3. Avez-vous un script ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemScript of prixScripts">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemScript.name" (change)="updateBudget(itemScript)">
+                                                        {{itemScript.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-                        </mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-                        <!-- Step 5 -->
-                        <mat-step>
+                                    </mat-step>
 
-                            <label class="titre-label" id="example-radio-group-label">
-                                <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                             </label>
-                            <div *ngFor="let itemDuree of newDurees">
-                                <div>
-                                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                        <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                          {{itemDuree.name}}
-                                        </mat-radio-button>
-                                    </mat-radio-group>
-                                </div>  
-                            </div>
+                                    <!-- Step 4 Animation -->
+                                    <mat-step>
 
-                            <div class="button-stepper">
-                                <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                                <button mat-button matStepperNext>Suivant</button>
-                            </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>4. Faut-il animer un personnage ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemAnimation of prixAnimations">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemAnimation.name" (change)="updateBudget(itemAnimation)">
+                                                        {{itemAnimation.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-                    </mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-                    <!-- Step 6 -->
-                    <mat-step>
+                                    </mat-step>
 
-                        <label class="titre-label" id="example-radio-group-label">
-                            <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                         </label>
-                        <div *ngFor="let itemDuree of newDurees">
-                            <div>
-                                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                    <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                      {{itemDuree.name}}
-                                    </mat-radio-button>
-                                </mat-radio-group>
-                            </div>  
-                        </div>
+                                    <!-- Step 5 Typographie -->
+                                    <mat-step>
 
-                        <div class="button-stepper">
-                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                            <button mat-button matStepperNext>Suivant</button>
-                        </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>5. Animation de typographie ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemTypographie of prixTypographies">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemTypographie.name" (change)="updateBudget(itemTypographie)">
+                                                        {{itemTypographie.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-                </mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-                <!-- Step 7  -->
-                <mat-step>
+                                    </mat-step>
 
-                    <label class="titre-label" id="example-radio-group-label">
-                        <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                     </label>
-                    <div *ngFor="let itemDuree of newDurees">
-                        <div>
-                            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                                <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                                  {{itemDuree.name}}
-                                </mat-radio-button>
-                            </mat-radio-group>
-                        </div>  
-                    </div>
+                                    <!-- Step 6 Voix off -->
+                                    <mat-step>
 
-                    <div class="button-stepper">
-                        <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                        <button mat-button matStepperNext>Suivant</button>
-                    </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>6. Avez-vous besoin d'une voix-off ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemVoix of prixVoix">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemVoix.name" (change)="updateBudget(itemVoix)">
+                                                        {{itemVoix.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-            </mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-            <!-- Step 8 -->
-            <mat-step>
+                                    </mat-step>
 
-                <label class="titre-label" id="example-radio-group-label">
-                    <h1>1. Quelle durée souhaitez-vous ?</h1> 
-                 </label>
-                <div *ngFor="let itemDuree of newDurees">
-                    <div>
-                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                            <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                              {{itemDuree.name}}
-                            </mat-radio-button>
-                        </mat-radio-group>
-                    </div>  
-                </div>
+                                    <!-- Step 7  Sous Titrage -->
+                                    <mat-step>
 
-                <div class="button-stepper">
-                    <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                    <button mat-button matStepperNext>Suivant</button>
-                </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>7. Avez-vous besoin d'un sous-titrage ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemTitrages of prixTitrages">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemTitrages.name" (change)="updateBudget(itemTitrages)">
+                                                        {{itemTitrages.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-        </mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-        <!-- Step 9 -->
-        <mat-step>
+                                    </mat-step>
 
-            <label class="titre-label" id="example-radio-group-label">
-                <h1>1. Quelle durée souhaitez-vous ?</h1> 
-             </label>
-            <div *ngFor="let itemDuree of newDurees">
-                <div>
-                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                        <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                          {{itemDuree.name}}
-                        </mat-radio-button>
-                    </mat-radio-group>
-                </div>  
-            </div>
+                                    <!-- Step 8 Musical -->
+                                    <mat-step>
 
-            <div class="button-stepper">
-                <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-                <button mat-button matStepperNext>Suivant</button>
-            </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>8. Avez-vous besoin d'un choix musical ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemMusical of prixMusicals">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemMusical.name" (change)="updateBudget(itemMusical)">
+                                                        {{itemMusical.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-    </mat-step>
-    
-    <!-- Step 10 -->
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-    <mat-step>
+                                    </mat-step>
 
-        <label class="titre-label" id="example-radio-group-label">
-            <h1>1. Quelle durée souhaitez-vous ?</h1> 
-         </label>
-        <div *ngFor="let itemDuree of newDurees">
-            <div>
-                <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                    <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                      {{itemDuree.name}}
-                    </mat-radio-button>
-                </mat-radio-group>
-            </div>  
-        </div>
+                                    <!-- Step 9 Illustration -->
+                                    <mat-step>
 
-        <div class="button-stepper">
-            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-            <button mat-button matStepperNext>Suivant</button>
-        </div>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>9. Avez-vous besoin d'intégrer de l'illustration sonore (bruitage, sound
+                                                design) ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemIllustration of prixIllustrations">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemIllustration.name" (change)="updateBudget(itemIllustration)">
+                                                        {{itemIllustration.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
 
-</mat-step>
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
 
-<!-- Step 11  -->
-<mat-step>
+                                    </mat-step>
 
-    <label class="titre-label" id="example-radio-group-label">
-        <h1>1. Quelle durée souhaitez-vous ?</h1> 
-     </label>
-    <div *ngFor="let itemDuree of newDurees">
-        <div>
-            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                <mat-radio-button class="example-radio-button" [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
-                  {{itemDuree.name}}
-                </mat-radio-button>
-            </mat-radio-group>
-        </div>  
-    </div>
+                                    <!-- Step 10 Diffusion -->
 
-    <div class="button-stepper">
-        <button class="button-retour" mat-button matStepperPrevious>Retour</button>
-        <button mat-button matStepperNext>Suivant</button>
-    </div>
+                                    <mat-step>
 
-</mat-step>
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>10. Dispositif de diffusion ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemDiffusion of prixDiffusions">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemDiffusion.name" (change)="updateBudget(itemDiffusion)">
+                                                        {{itemDiffusion.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+
+                                    </mat-step>
+
+                                    <!-- Step 11 PAD  -->
+                                    <mat-step>
+
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h1>11. Quelle est votre PAD* ?</h1>
+                                        </label>
+                                        <div *ngFor="let itemPAD of prixPADs">
+                                            <div>
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemPAD.name" (change)="updateBudget(itemPAD)">
+                                                        {{itemPAD.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                        </div>
+
+                                    </mat-step>
 
 
                                 </mat-horizontal-stepper>
 
-                                
+
 
                             </div>
                         </div>
                         <div class="buttons">
-                            <button routerLink="../budgetmotion" class="buttonReset">Réinitialiser votre estimation</button>
+                            <button routerLink="../budgetmotion" class="buttonReset">Réinitialiser votre
+                                estimation</button>
                         </div>
                     </div>
                 </div>
