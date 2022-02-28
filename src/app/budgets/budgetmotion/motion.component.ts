@@ -151,4 +151,8 @@ export class MotionComponent implements OnInit {
         ? this.budget - checkboxSelected.prix 
         : this.budget + checkboxSelected.prix;
   }
+
+  refresh(): void {
+    window.location.reload();
+  }
 }
