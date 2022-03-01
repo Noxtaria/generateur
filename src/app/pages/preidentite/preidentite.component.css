@@ -4,6 +4,15 @@ body {
 
 }
 
+.container a{
+
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 3%;
+
+}
+
 .container .row {
 
     display: flex;
@@ -16,7 +25,7 @@ body {
     max-height: 100%;
     background: url(../../../assets/images/image_fond_identite_visuelle_4500x3000.jpg);
     width: 100%;
-    background-size: 150%;
+    background-size: 160%;
     background-repeat: no-repeat;
 }
 
@@ -111,5 +120,5 @@ h1 {
 .titre-identite {
 
     position: absolute;
-    transform: translate(5%, 220%);
+    transform: translate(5%, 270%);
 }
