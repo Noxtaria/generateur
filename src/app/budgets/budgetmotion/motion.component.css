@@ -1,3 +1,11 @@
+.header a{
+
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 2%;
+}
+
 .container .row {
 
     display: flex;
@@ -31,7 +39,7 @@
 
 .budget {
     position: absolute;
-    transform: translate(122%, 120%);
+    transform: translate(122%, 165%);
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10%;
@@ -141,7 +149,7 @@
 .titre-motion {
 
     position: absolute;
-    transform: translate(5%, 220%);
+    transform: translate(5%, 260%);
 }
 
 .titre-label {
@@ -240,7 +248,7 @@ button {
   }
 
   .step-content-duree {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
@@ -252,7 +260,7 @@ button {
   }
 
   .step-content-animation {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
@@ -264,7 +272,7 @@ button {
   }
 
   .step-content-script {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
@@ -276,7 +284,7 @@ button {
   }
 
   .step-content-graphique {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 32%;
     padding-left: 10%;
     padding-right: 10%;
@@ -288,7 +296,7 @@ button {
   }
 
   .step-content-voix {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
@@ -300,7 +308,7 @@ button {
   }
 
   .step-content-typo {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
@@ -313,7 +321,7 @@ button {
 
   .step-content-titrage {
 
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 32%;
     padding-left: 10%;
     padding-right: 10%;
@@ -325,7 +333,7 @@ button {
   }
 
   .step-content-musical {
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
@@ -338,7 +346,7 @@ button {
 
   .step-content-illustration {
 
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 28%;
     padding-left: 10%;
     padding-right: 10%;
@@ -351,7 +359,7 @@ button {
 
   .step-content-diffusion {
 
-    padding-top: 20%;
+    padding-top: 21%;
     padding-bottom: 21%;
     padding-left: 10%;
     padding-right: 10%;
@@ -365,7 +373,7 @@ button {
 
   .step-content-pad {
 
-    padding-top: 20%;
+    padding-top: 22%;
     padding-bottom: 20%;
     padding-left: 10%;
     padding-right: 10%;
@@ -374,7 +382,7 @@ button {
 
   .step-content-form {
 
-    padding-top: 17%;
+    padding-top: 18%;
     padding-bottom: 15%;
     padding-left: 10%;
     padding-right: 10%;
@@ -383,7 +391,7 @@ button {
 
   .step-content-end {
 
-    padding-top: 17%;
+    padding-top: 18%;
     padding-bottom: 34%;
     padding-left: 10%;
     padding-right: 10%;
