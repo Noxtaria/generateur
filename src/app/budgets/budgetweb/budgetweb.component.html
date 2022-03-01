@@ -24,28 +24,474 @@
             <div class="presentationDroite">
 
                 <div class="miseEnPageDroite">
+
+                    <div>
+                        <nav class="header">
+
+                            <a routerLink="">
+                                <img src="../../../assets/images/logo_devis_communication.png" alt="LOGO DEVIS COMMUNICATION">
+                            </a>
+                    
+                        </nav>
+                    </div>
                     <div class="positionAccordion">
                         <div class="accordion">
 
                             <div id="triangle-left"></div>
 
-                            <div class="duréeVideo">
-                                <h3>Durée de la vidéo</h3>
-                                <span>(plusieurs choix possibles)</span>
+                            <!-- <div class="duréeVideo"> -->
 
-                                <form>
-                                    <div *ngFor="let itemCheckbox of checkboxes" class="row">
-                                        <label class="checkbox">
-                                            <h3>{{itemCheckbox.name}}</h3>
-                                            <p>{{itemCheckbox.prix}}</p> €
-                                            <input type="checkbox" name="checkb format"
-                                                (change)="updateBudget(itemCheckbox)"
-                                                [(ngModel)]="itemCheckbox.selected">
+
+                            <mat-horizontal-stepper>
+
+                                <!-- Step 1 Durée -->
+                                <mat-step>
+
+                                    <div class="step-content-duree">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>1. Quelle durée souhaitez-vous ?</h2>
                                         </label>
+                                        <div>
+                                            <div *ngFor="let itemDuree of prixDurees">
+                                                <div class="content-padding-duree">
+                                                    <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                        class="example-radio-group">
+                                                        <mat-radio-button class="example-radio-button button-padding"
+                                                            [value]="itemDuree.name" (change)="updateBudget(itemDuree)">
+                                                            {{itemDuree.name}}
+                                                        </mat-radio-button>
+                                                    </mat-radio-group>
+                                                </div>
+                                            </div>
+                                            <div class="button-stepper">
+                                                <button mat-button matStepperNext>Suivant</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </form>
-                            </div>
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 2 BT Graphique -->
+                                <mat-step>
+
+                                    <div class="step-content-graphique">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>2. Reprise d'un branding / territoire graphique existant ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemBTGraphique of prixBTGraphiques">
+                                            <div class="button-radio-2 content-padding-graphique">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemBTGraphique.name"
+                                                        (change)="updateBudget(itemBTGraphique)">
+                                                        {{itemBTGraphique.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper ">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 3 Script -->
+                                <mat-step>
+
+                                    <div class="step-content-script">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>3. Avez-vous un script ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemScript of prixScripts">
+                                            <div class="content-padding-script">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button button-padding"
+                                                        [value]="itemScript.name" (change)="updateBudget(itemScript)">
+                                                        {{itemScript.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 4 Animation -->
+                                <mat-step>
+
+                                    <div class="step-content-animation">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>4. Faut-il animer un personnage ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemAnimation of prixAnimations">
+                                            <div class="content-padding-animation">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button
+                                                        class="example-radio-button button-padding button-space"
+                                                        [value]="itemAnimation.name"
+                                                        (change)="updateBudget(itemAnimation)">
+                                                        {{itemAnimation.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 5 Typographie -->
+                                <mat-step>
+
+                                    <div class="step-content-typo">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>5. Animation de typographie ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemTypographie of prixTypographies">
+                                            <div class="content-padding-typo">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button
+                                                        class="example-radio-button button-padding button-space"
+                                                        [value]="itemTypographie.name"
+                                                        (change)="updateBudget(itemTypographie)">
+                                                        {{itemTypographie.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 6 Voix off -->
+                                <mat-step>
+
+                                    <div class="step-content-voix">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>6. Avez-vous besoin d'une voix-off ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemVoix of prixVoix">
+                                            <div class="content-padding-voix">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button
+                                                        class="example-radio-button button-padding button-space"
+                                                        [value]="itemVoix.name" (change)="updateBudget(itemVoix)">
+                                                        {{itemVoix.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 7  Sous Titrage -->
+                                <mat-step>
+
+                                    <div class="step-content-titrage">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>7. Avez-vous besoin d'un sous-titrage ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemTitrages of prixTitrages">
+                                            <div class="content-padding-titrage">
+                                                <mat-radio-group
+                                                    aria-labelledby="example-radio-group-label button-padding"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemTitrages.name"
+                                                        (change)="updateBudget(itemTitrages)">
+                                                        {{itemTitrages.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 8 Musical -->
+                                <mat-step>
+
+                                    <div class="step-content-musical">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>8. Avez-vous besoin d'un choix musical ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemMusical of prixMusicals">
+                                            <div class="content-padding-musical">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemMusical.name" (change)="updateBudget(itemMusical)">
+                                                        {{itemMusical.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 9 Illustration -->
+                                <mat-step>
+
+                                    <div class="step-content-illustration">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>9. Avez-vous besoin d'intégrer de l'illustration sonore (bruitage, sound
+                                                design) ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemIllustration of prixIllustrations">
+                                            <div class="content-padding-illustration">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemIllustration.name"
+                                                        (change)="updateBudget(itemIllustration)">
+                                                        {{itemIllustration.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 10 Diffusion -->
+
+                                <mat-step>
+
+                                    <div class="step-content-diffusion">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>10. Dispositif de diffusion ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemDiffusion of prixDiffusions">
+                                            <div class="content-padding-diffusion">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemDiffusion.name"
+                                                        (change)="updateBudget(itemDiffusion)">
+                                                        {{itemDiffusion.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 11 PAD  -->
+                                <mat-step>
+
+                                    <div class="step-content-pad">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>11. Quelle est votre PAD* ?</h2>
+                                        </label>
+                                        <div *ngFor="let itemPAD of prixPADs">
+                                            <div class="content-padding-pad">
+                                                <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                    class="example-radio-group">
+                                                    <mat-radio-button class="example-radio-button"
+                                                        [value]="itemPAD.name" (change)="updateBudget(itemPAD)">
+                                                        {{itemPAD.name}}
+                                                    </mat-radio-button>
+                                                </mat-radio-group>
+                                            </div>
+                                        </div>
+
+                                        <span><i>*PAD = Prêt à diffuser</i></span>
+
+                                        <div class="button-stepper">
+                                            <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                            <button mat-button matStepperNext>Suivant</button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button (click)="refresh()" class="buttonReset">Réinitialiser votre
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 12 Form  -->
+                                <mat-step>
+
+                                    <div class="step-content-form">
+                                        <label class="titre-label" id="example-radio-group-label">
+                                            <h2>Recevez immédiatement votre estimation détaillée :</h2>
+                                        </label>
+                                        
+                                        <div class="content-form">
+                                            <div class="profil-form">
+                                                <input class="nom-padding-input" type="text" placeholder="Nom*" required>
+                                                <input class="prenom-padding-input" type="text" placeholder="Prénom*" required>
+                                            </div>
+
+                                            <div class="input-form">
+                                                <input type="text" placeholder="Société*" required>
+                                                <input type="email" placeholder="Email*" required>
+                                                <input type="tel" placeholder="Téléphone*" required>
+                                                
+                                            </div>
+
+                                            <div class="input-data-perso">
+                                                <input class="input-radio-data" type="radio">
+                                                <p>Je refuse que mes données personnelles soient utilisées ultérieurement à des fins de prospection commerciale.</p>
+                                            </div>
+                                            
+
+                                        </div>
+                                        
+
+                                    </div>
+
+
+                                    <div class="buttons">
+                                        <button mat-button matStepperNext class="button-estimation">Recevoir mon
+                                            estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 13 Merci  -->
+                                <mat-step>
+
+                                    <div class="step-content-end-flex">
+                                        <div class="step-content-end">
+                                            <label class="titre-label" id="example-radio-group-label">
+                                                <h1 class="merci-end">Merci !</h1>
+                                            </label>
+                                            
+                                            <div class="content-end">
+                                                
+                                                <p>Votre demande est pris en compte, un conseiller vous contactera rapidement !</p>
+    
+                                            </div>
+                                            
+    
+                                        </div>
+                                    </div>
+                                    
+
+
+                                    <div class="buttons">
+                                        <button routerLink="" class="button-end-accueil">Retour à la page d'accueil</button>
+                                    </div>
+
+                                </mat-step>
+
+
+                            </mat-horizontal-stepper>
+
                         </div>
+
                     </div>
                 </div>
             </div>
