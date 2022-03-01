@@ -185,6 +185,15 @@
     padding: 3%;
 }
 
+.button-end-accueil {
+
+    background-color: black;
+    color: #ffd200;
+    font-weight: bolder;
+    width: 100%;
+    padding: 3%;
+}
+
 .button-stepper {
 
 
@@ -372,6 +381,15 @@ button {
 
   }
 
+  .step-content-end {
+
+    padding-top: 17%;
+    padding-bottom: 34%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+
   ::ng-deep span .mat-radio-inner-circle {
 
     background-color: #ffd200 !important;
@@ -422,4 +440,22 @@ button {
   .input-radio-data {
     margin-top: 3%;
     size: 12px;
+  }
+
+  h1.merci-end {
+    color: #ffd200;
+    font-size: 74px;
+  }
+
+  .content-end {
+
+    font-size: 34px;
+    font-weight: bold;
+  }
+
+  .step-content-end-flex {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }

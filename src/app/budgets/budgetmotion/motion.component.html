@@ -445,8 +445,35 @@
 
 
                                     <div class="buttons">
-                                        <button (click)="refresh()" class="button-estimation">Recevoir mon
+                                        <button mat-button matStepperNext class="button-estimation">Recevoir mon
                                             estimation</button>
+                                    </div>
+
+                                </mat-step>
+
+                                <!-- Step 13 Merci  -->
+                                <mat-step>
+
+                                    <div class="step-content-end-flex">
+                                        <div class="step-content-end">
+                                            <label class="titre-label" id="example-radio-group-label">
+                                                <h1 class="merci-end">Merci !</h1>
+                                            </label>
+                                            
+                                            <div class="content-end">
+                                                
+                                                <p>Votre demande est pris en compte, un conseiller vous contactera rapidement !</p>
+    
+                                            </div>
+                                            
+    
+                                        </div>
+                                    </div>
+                                    
+
+
+                                    <div class="buttons">
+                                        <button routerLink="" class="button-end-accueil">Retour à la page d'accueil</button>
                                     </div>
 
                                 </mat-step>
@@ -454,9 +481,6 @@
 
                             </mat-horizontal-stepper>
 
-
-
-                            <!-- </div> -->
                         </div>
 
                     </div>
