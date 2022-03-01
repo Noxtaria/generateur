@@ -399,6 +399,7 @@
     
                                             <div class="button-stepper">
                                                 <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                                <button mat-button matStepperNext>Suivant</button>
                                             </div>
                                         </div>
 
@@ -406,6 +407,40 @@
                                         <div class="buttons">
                                             <button (click)="refresh()" class="buttonReset">Réinitialiser votre
                                                 estimation</button>
+                                        </div>
+
+                                    </mat-step>
+
+                                    <!-- Step 12 Form  -->
+                                    <mat-step>
+
+                                        <div class="step-content-pad">
+                                            <label class="titre-label" id="example-radio-group-label">
+                                                <h1>Recevez immédiatement votre estimation détaillée :</h1>
+                                            </label>
+                                            <div *ngFor="let itemPAD of prixPADs">
+                                                <div class="content-padding-pad">
+                                                    <mat-radio-group aria-labelledby="example-radio-group-label"
+                                                        class="example-radio-group">
+                                                        <mat-radio-button class="example-radio-button"
+                                                            [value]="itemPAD.name" (change)="updateBudget(itemPAD)">
+                                                            {{itemPAD.name}}
+                                                        </mat-radio-button>
+                                                    </mat-radio-group>
+                                                </div>
+                                            </div>
+    
+                                            <span><i>*PAD = Prêt à diffuser</i></span>
+    
+                                            <div class="button-stepper">
+                                                <button class="button-retour" mat-button matStepperPrevious>Retour</button>
+                                                <button mat-button matStepperNext>Suivant</button>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="buttons">
+                                            <button (click)="refresh()" class="button-estimation">Recevoir mon estimation</button>
                                         </div>
 
                                     </mat-step>

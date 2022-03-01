@@ -184,6 +184,15 @@ h1 {
 
 }
 
+.button-estimation {
+
+    background-color: #ffd200;
+    color: black;
+    font-weight: bolder;
+    width: 100%;
+    padding: 3%;
+}
+
 .button-stepper {
 
 
@@ -360,4 +369,9 @@ button {
     padding-left: 10%;
     padding-right: 10%;
 
+  }
+
+  ::ng-deep span .mat-radio-inner-circle {
+
+    background-color: #ffd200 !important;
   }
