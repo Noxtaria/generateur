@@ -31,7 +31,7 @@
 
 .budget {
     position: absolute;
-    transform: translate(123%, 120%);
+    transform: translate(122%, 120%);
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10%;
@@ -84,14 +84,6 @@
 .presentationDroite {
 
     width: 100%;
-}
-
-
-h1 {
-
-    color: black;
-    font-weight: bold;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .accordion {
@@ -239,8 +231,8 @@ button {
   }
 
   .step-content-duree {
-    padding-top: 19%;
-    padding-bottom: 24%;
+    padding-top: 20%;
+    padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -252,7 +244,7 @@ button {
 
   .step-content-animation {
     padding-top: 20%;
-    padding-bottom: 24%;
+    padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -264,7 +256,7 @@ button {
 
   .step-content-script {
     padding-top: 20%;
-    padding-bottom: 24%;
+    padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -276,7 +268,7 @@ button {
 
   .step-content-graphique {
     padding-top: 20%;
-    padding-bottom: 24%;
+    padding-bottom: 32%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -288,7 +280,7 @@ button {
 
   .step-content-voix {
     padding-top: 20%;
-    padding-bottom: 24%;
+    padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -300,7 +292,7 @@ button {
 
   .step-content-typo {
     padding-top: 20%;
-    padding-bottom: 24%;
+    padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -313,7 +305,7 @@ button {
   .step-content-titrage {
 
     padding-top: 20%;
-    padding-bottom: 29%;
+    padding-bottom: 32%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -324,8 +316,8 @@ button {
   }
 
   .step-content-musical {
-    padding-top: 19%;
-    padding-bottom: 19%;
+    padding-top: 20%;
+    padding-bottom: 26%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -338,7 +330,7 @@ button {
   .step-content-illustration {
 
     padding-top: 20%;
-    padding-bottom: 19%;
+    padding-bottom: 28%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -350,8 +342,8 @@ button {
 
   .step-content-diffusion {
 
-    padding-top: 19%;
-    padding-bottom: 19%;
+    padding-top: 20%;
+    padding-bottom: 21%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -364,8 +356,8 @@ button {
 
   .step-content-pad {
 
-    padding-top: 19%;
-    padding-bottom: 19%;
+    padding-top: 20%;
+    padding-bottom: 20%;
     padding-left: 10%;
     padding-right: 10%;
 
