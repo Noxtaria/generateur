@@ -43,7 +43,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     BudgeteditionComponent,
     BudgetfilmComponent,
     BudgetidentiteComponent,
-    BudgetwebComponent
+    BudgetwebComponent,
   ],
   imports: [
     BrowserModule,
