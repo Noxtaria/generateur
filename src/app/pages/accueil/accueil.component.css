@@ -15,6 +15,7 @@ body{
 .projets {
 
     margin-left: 12%;
+    
 
 }
 
@@ -53,7 +54,7 @@ background: url(../../../assets/images/bt_demarrer_over.jpg);
 
 .spanLorem {
 
-    color: grey;
+    color: black;
     font-size: 11px;
     
 }
@@ -81,3 +82,57 @@ width: 150px;
 
     background-image: url(../../../assets/images/bt_demarrer_over.jpg);
 }
+
+
+/*** Media Query ****/
+
+/* Smartphone */
+
+@media only screen and (min-width: 360px) and (max-width: 500px) {
+
+    .container {
+
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: black;
+    
+    }
+
+    nav.container img {
+        max-width: 70%;
+
+        display: block;
+        margin: auto;
+    }
+
+    .projets {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1%;
+    }
+
+    .spanLorem {
+        font-size: 10px;
+    }
+
+    .div-spanLorem {
+        margin-left: 9px;
+    }
+
+    
+
+    
+    }
+
+    .projet{
+
+        width: 375px;
+        margin: 40px;
+        display: inline-block;
+        background-color: white;
+        border: 0px black solid;
+        overflow: hidden;
+    
+    }
