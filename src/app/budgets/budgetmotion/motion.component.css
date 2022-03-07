@@ -467,3 +467,227 @@ button {
     flex-direction: column;
     justify-content: center;
   }
+
+  /*** Responsive ***/
+
+/* Smartphone */
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+
+  .container .row {
+
+      display: flex;
+      flex-direction: column;
+  }
+
+  .presentationGauche {
+
+      max-width: 100%;
+      max-height: 100%;
+      background: url(../../../assets/images/pawel-czerwinski-W_mfoOi1Elc-unsplash.jpg);
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      padding-bottom: 80%;
+  
+  }
+
+  .presentationDroite {
+
+      width: 100%;
+  }
+
+  .container img {
+      max-width: 50%;
+  }
+
+  .container a{
+
+      position: absolute;
+      transform: translate(0%, -1100%);
+  }
+
+  .titre-motion {
+
+      position: absolute;
+      transform: translate(10%, 100%);
+      width: 100%;
+      
+  }
+  
+  .buttons {
+
+      display: flex;
+      flex-direction: column;
+  
+  }
+
+  div.accordion h1{
+      font-size: 16px;
+  }
+
+  div.accordion p{
+      font-size: 14px;
+  }
+
+  .square {
+
+      padding-right: 2%;
+  }
+
+  img.square{
+      width: 5%;
+  }
+
+  button {
+      font-size: 12px;
+  }
+
+  #triangle-left {
+    width  : 0;
+  height : 0;
+  border-left   : 25px solid transparent;
+  border-right  : 25px solid transparent;
+  border-bottom : 50px solid white;
+    position: absolute;
+    transform: translate(300%, -95%);
+  }
+
+  .budget {
+    position: absolute;
+    transform: translate(40%, 157%);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #ffd200;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: black;
+}
+
+.titre-budget {
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.resultatBudget {
+
+  font-size: 20px;
+  font-weight: bold;
+}
+}
+
+
+
+/* Tablette */
+
+@media only screen and (min-width: 501px) and (max-width: 959px) {
+
+  .container .row {
+
+      display: flex;
+      flex-direction: column;
+  }
+
+  .presentationGauche {
+
+      max-width: 100%;
+      max-height: 100%;
+      background: url(../../../assets/images/pawel-czerwinski-W_mfoOi1Elc-unsplash.jpg);
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      padding-bottom: 70%;
+  
+  }
+
+  .presentationDroite {
+
+      width: 100%;
+  }
+
+  .container img {
+      max-width: 50%;
+  }
+
+  .container a{
+
+      position: absolute;
+      transform: translate(0%, -765%);
+  }
+
+  .titre-motion {
+
+      position: absolute;
+      transform: translate(10%, 270%);
+      width: 100%;
+      
+  }
+  
+  .buttons {
+
+      display: flex;
+      flex-direction: column;
+  
+  }
+
+  div.accordion h1{
+      font-size: 16px;
+  }
+
+  div.accordion p{
+      font-size: 14px;
+  }
+
+  .square {
+
+      padding-right: 2%;
+  }
+
+  img.square{
+      width: 5%;
+  }
+
+  button {
+      font-size: 12px;
+  }
+
+  #triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 48px solid transparent;
+    border-bottom: 48px solid transparent;
+    border-right: 77px solid white;
+    position: absolute;
+    transform: translate(-100%, 340%);
+}
+
+.budget {
+  position: absolute;
+  transform: translate(122%, 165%);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-color: #ffd200;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+
+.titre-budget {
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.resultatBudget {
+
+  font-size: 20px;
+  font-weight: bold;
+}
+}
