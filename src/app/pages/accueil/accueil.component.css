@@ -7,19 +7,20 @@
 
 }
 
-body{
-    
+body {
+
     font-family: 'Montserrat', arial;
 
 }
+
 .projets {
 
-    margin-left: 12%;
-    
+    margin-left: 15%;
+
 
 }
 
-.picture{
+.picture {
 
     width: 400px;
     height: 266px;
@@ -27,7 +28,7 @@ body{
 
 }
 
-.projet{
+.projet {
 
     width: 400px;
     margin: 40px;
@@ -45,9 +46,9 @@ body{
 
 }
 
-.projet img:hover{
+.projet img:hover {
 
-background: url(../../../assets/images/bt_demarrer_over.jpg);
+    background: url(../../../assets/images/bt_demarrer_over.jpg);
 
 
 }
@@ -55,8 +56,8 @@ background: url(../../../assets/images/bt_demarrer_over.jpg);
 .spanLorem {
 
     color: black;
-    font-size: 11px;
-    
+    font-size: 10px;
+
 }
 
 button {
@@ -64,7 +65,7 @@ button {
     padding-top: 15%;
     padding-bottom: 15%;
     border-bottom-right-radius: 15px;
-    
+
 }
 
 .contain {
@@ -75,7 +76,7 @@ button {
 }
 
 .demarrer {
-width: 150px;
+    width: 150px;
 }
 
 .demarrer:hover {
@@ -88,14 +89,14 @@ width: 150px;
 
 /* Smartphone */
 
-@media only screen and (min-width: 360px) and (max-width: 500px) {
+@media only screen and (min-width: 0px) and (max-width: 500px) {
 
     .container {
 
         padding-top: 2%;
         padding-bottom: 2%;
         background-color: black;
-    
+
     }
 
     nav.container img {
@@ -107,10 +108,10 @@ width: 150px;
 
     .projets {
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 1%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 1%;
     }
 
     .spanLorem {
@@ -121,18 +122,70 @@ width: 150px;
         margin-left: 9px;
     }
 
-    
 
-    
+
+
+}
+
+.projet {
+
+    width: 375px;
+    margin: 40px;
+    display: inline-block;
+    background-color: white;
+    border: 0px black solid;
+    overflow: hidden;
+
+}
+
+
+/* Tablette */
+
+@media only screen and (min-width: 501px) and (max-width: 959px) {
+
+    .container {
+
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: black;
+
     }
 
-    .projet{
+    nav.container img {
+        max-width: 70%;
 
-        width: 375px;
-        margin: 40px;
-        display: inline-block;
-        background-color: white;
-        border: 0px black solid;
-        overflow: hidden;
-    
+        display: block;
+        margin: auto;
     }
+
+    .projets {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 1%;
+    }
+
+    .spanLorem {
+        font-size: 10px;
+    }
+
+    .div-spanLorem {
+        margin-left: 9px;
+    }
+
+
+
+
+}
+
+.projet {
+
+    width: 375px;
+    margin: 40px;
+    display: inline-block;
+    background-color: white;
+    border: 0px black solid;
+    overflow: hidden;
+
+}
