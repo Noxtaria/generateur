@@ -1,27 +1,29 @@
 # Generateur
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Ce projet est généré avec la version Angular 13.0.3.
 
-## Development server
+## Cloner le projet
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Afin d'avoir le projet sur votre ordinateur vous devez avoir git d'installer :
 
-## Code scaffolding
+https://git-scm.com/download/win ( windows )
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://git-scm.com/download/mac ( mac )
 
-## Build
+https://git-scm.com/download/linux ( linux )
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Une fois Git d'installer vous devez dans votre Invite de Commandes ( CMD ) :
 
-## Running unit tests
+git clone https://github.com/Noxtaria/Generateur-Estimation-Prix.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Lancer le projet
 
-## Further help
+Pour lancer le projet il suffit d'ouvrir la console et d'écrire : 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm start
+
+## Ouvrir la page internet 
+
+Vous aurez un lien cliquable comme : http://localhost:4200/ il suffira de cliquer dessus.
