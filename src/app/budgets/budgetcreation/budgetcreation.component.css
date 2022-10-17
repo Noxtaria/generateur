@@ -44,18 +44,6 @@
   color: black;
 }
 
-
-
-#triangle-left {
-  width: 0;
-  height: 0;
-  border-top: 48px solid transparent;
-  border-bottom: 48px solid transparent;
-  border-right: 77px solid white;
-  position: absolute;
-  transform: translate(-100%, 340%);
-}
-
 .titre-budget {
 
   font-size: 26px;

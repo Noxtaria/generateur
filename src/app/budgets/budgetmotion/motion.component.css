@@ -53,15 +53,6 @@
 
 
 
-#triangle-left {
-  width: 0;
-  height: 0;
-  border-top: 48px solid transparent;
-  border-bottom: 48px solid transparent;
-  border-right: 77px solid white;
-  position: absolute;
-  transform: translate(-100%, 340%);
-}
 
 .titre-budget {
 
@@ -546,15 +537,7 @@ h1.merci-end {
     font-size: 12px;
   }
 
-  #triangle-left {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid white;
-    /* position: sticky; */
-    /* transform: translate(350%, -95%); */
-  }
+
 
   .budget {
     position: sticky;
@@ -823,15 +806,7 @@ h1.merci-end {
     font-size: 12px;
   }
 
-  #triangle-left {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid white;
-    /* position: sticky; */
-    /* transform: translate(350%, -95%); */
-  }
+
 
   .budget {
     position: sticky;
